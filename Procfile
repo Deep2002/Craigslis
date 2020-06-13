@@ -1,0 +1,1 @@
+web: gunicorn Craigslis.wsgi --log-file -

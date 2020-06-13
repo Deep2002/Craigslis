@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="center">
+<h2>{{ search | title}}</h2>
+
+<!-- Cards -->
+<div class="container">
+    <div class="row">
+        {% for post in final_postings %}
+            <div class="column">
+                <div class="card">
+                    <div class="card-image">
+                        <img class="sizing" src="{{ post.3 }}">
+                    </div>
+                    <div class="card-content">
+                        <p>{{ post.0 }}</p><br>
+                        <p>price:{{ post.2 }}</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="{{ post.1 }}">Click Here</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div>
+    <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top material-icons" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span>arrow_upward</a>
+</div>
+{% endblock content %}

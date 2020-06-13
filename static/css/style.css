@@ -1,0 +1,32 @@
+.card {
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.card-image {
+  height: 100%; /* Your height here */
+  overflow: hidden;
+}
+
+.column {
+    margin: auto;
+  }  
+
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin: auto;
+      margin-left: 10%;
+    }
+  }
+
+.back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display:none;
+    margin-bottom: 50px;
+}

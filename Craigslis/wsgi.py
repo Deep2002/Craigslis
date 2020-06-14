@@ -1,5 +1,5 @@
 """
-WSGI config for codedaddies_list project.
+WSGI config for Craigslis project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

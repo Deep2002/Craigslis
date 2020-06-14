@@ -1,5 +1,5 @@
 """
-ASGI config for codedaddies_list project.
+ASGI config for Craigslis project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 

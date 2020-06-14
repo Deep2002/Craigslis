@@ -26,7 +26,7 @@ SECRET_KEY = 'imtw548*tc60h=98wykhe#w3djtgyj@g63h7jl0!a(v4ec878x'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['craigslis.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['craigslis.herokuapp.com','*']
 
 
 # Application definition
@@ -57,7 +57,7 @@ ROOT_URLCONF = 'Craigslis.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR,],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -120,7 +120,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 

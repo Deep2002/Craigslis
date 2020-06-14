@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'codedaddies_list.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Craigslis.settings')
 
 application = get_wsgi_application()

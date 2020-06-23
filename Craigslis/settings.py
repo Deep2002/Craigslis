@@ -26,7 +26,7 @@ SECRET_KEY = 'imtw548*tc60h=98wykhe#w3djtgyj@g63h7jl0!a(v4ec878x'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['craigslis.herokuapp.com','*']
+ALLOWED_HOSTS = ['craigslis.herokuapp.com', '*']
 
 
 # Application definition
@@ -125,3 +125,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
+if 'DATABASE_URL' in os.environ:
+    import dj_database_url
+    DATABASES = {'default': dj_database_url.config()}
